@@ -6,11 +6,13 @@ public class InvokeSnakes : MonoBehaviour
 {
     public GameObject objectToSpawn;
     public Vector3 offset;
+    public float iniTime;
+    public float repTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnMoreObjects", 1.0f, 7f);
+        InvokeRepeating("SpawnMoreObjects", iniTime, repTime);
     }
 
     // Update is called once per frame

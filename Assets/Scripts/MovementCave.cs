@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovementCave : MonoBehaviour
 {
     public float speed = 1f;
+    public float faster;
 
     void Update()
     {
@@ -17,6 +18,8 @@ public class MovementCave : MonoBehaviour
             // Reposiciona el objeto en -2.5 en el eje Z
             transform.position = new Vector3(transform.position.x, transform.position.y, 13.5f);
         }
+
+        speed = speed + faster;
 
     }
 }

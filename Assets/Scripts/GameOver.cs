@@ -8,6 +8,10 @@ public class GameOver : MonoBehaviour
 
     public AudioSource audioPlayer;
 
+    public AudioSource AudioPlayer3;
+
+    public ParticleSystem mouse;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,9 +35,11 @@ public class GameOver : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             audioPlayer.Play();
+            mouse.Play();
             // Destroy the player
             Destroy(collision.gameObject);
             Logic.gameOver();
+            AudioPlayer3.Stop();
         } 
     }
 }
