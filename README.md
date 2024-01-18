@@ -1,5 +1,5 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/uTVZkEVg)
-# Project Title
+# Scape Cave
 
 One Paragraph of project description goes here.
 
@@ -83,7 +83,7 @@ repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
 
 ## Authors
 
-  - **Billie Thompson** - *Provided README Template* -
+  - **Daniela Masihy Kowoll** - *Game designer and game developer* -
     [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of
