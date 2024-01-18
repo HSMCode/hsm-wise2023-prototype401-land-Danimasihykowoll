@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
+    public LogicScript Logic;
+
+    public AudioSource audioPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
     // Update is called once per frame
@@ -23,12 +27,13 @@ public class GameOver : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
      
-        //when the player touches another gameObject with the tag Mango
+        //when a snake touches another gameObject with the tag Player
         if (collision.gameObject.CompareTag("Player"))
         {
-           
-            // Destroy the mango
+            audioPlayer.Play();
+            // Destroy the player
             Destroy(collision.gameObject);
+            Logic.gameOver();
         } 
     }
 }

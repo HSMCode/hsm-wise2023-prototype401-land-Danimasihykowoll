@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovementSnake : MonoBehaviour
 {
-    public float speed = 3f;
+    public float speed = 9f;
     public float speed2 = 1f;
 
 
@@ -12,7 +12,7 @@ public class MovementSnake : MonoBehaviour
     {
         // Mueve el objeto en el eje x
         this.transform.Translate(Vector3.back * (speed * Time.deltaTime), Space.World);
-        this.transform.Translate(Vector3.left * (speed2 * Time.deltaTime), Space.World);
+        //this.transform.Translate(Vector3.left * (speed2 * Time.deltaTime), Space.World);
         
     }
 }

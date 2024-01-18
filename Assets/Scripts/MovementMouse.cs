@@ -8,6 +8,7 @@ public class MovementMouse : MonoBehaviour
 
     public float sideMove = 1.0f;
 
+    
 
     void Update()
     {
@@ -20,6 +21,7 @@ public class MovementMouse : MonoBehaviour
         {
             // Mueve el objeto hacia la derecha con velocidad aumentada y cambia la dirección
             this.transform.Translate(Vector3.right * (sideMove * Time.deltaTime), Space.World);
+            
         }
 
         
