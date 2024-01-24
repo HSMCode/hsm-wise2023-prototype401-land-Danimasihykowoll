@@ -7,7 +7,7 @@
 
   - [Description](#description)
   - [Prerequisites](#prerequisites)
-  - [How to Play](#deployment)
+  - [How to Play](#how-to-play)
   - [Repository Organization](#repository-organization)
   - [Authors](#authors)
   - [License](#license)
