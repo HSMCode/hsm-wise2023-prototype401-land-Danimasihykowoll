@@ -8,7 +8,7 @@ public class LogicScript : MonoBehaviour
 {
 
     public GameObject GameOverScreen;
-
+    public bool gameOver2;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,10 @@ public class LogicScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    
+         if (Input.GetKeyDown("space") && gameOver2)
+        {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
 
@@ -34,6 +37,7 @@ public class LogicScript : MonoBehaviour
 
     public void gameOver()
     {
+        gameOver2 = true;
         GameOverScreen.SetActive(true);
     }
 }

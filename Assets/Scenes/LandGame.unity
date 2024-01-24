@@ -328,8 +328,8 @@ Transform:
   m_GameObject: {fileID: 35997120}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.3, y: -0.78, z: 52.3}
-  m_LocalScale: {x: 1, y: 1, z: 11.390469}
+  m_LocalPosition: {x: -0.3, y: -0.78, z: 77.8}
+  m_LocalScale: {x: 1, y: 1, z: 26}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2412,8 +2412,9 @@ GameObject:
   m_Component:
   - component: {fileID: 294999024}
   - component: {fileID: 294999023}
+  - component: {fileID: 294999025}
   m_Layer: 0
-  m_Name: Cheese (4)
+  m_Name: Cheese 2
   m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2426,15 +2427,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294999022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  spawner: {fileID: 0}
+  distanciaMinima: 5
   objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
   offset: {x: 0, y: 0, z: 0}
-  iniTime: 7
-  repTime: 5
 --- !u!4 &294999024
 Transform:
   m_ObjectHideFlags: 0
@@ -2444,12 +2446,29 @@ Transform:
   m_GameObject: {fileID: 294999022}
   serializedVersion: 2
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
-  m_LocalPosition: {x: -1.5, y: 0.1369605, z: 5.6507807}
+  m_LocalPosition: {x: -2.51, y: 0.1369605, z: 10.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2114580094}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!114 &294999025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294999022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1081072347}
+  spawner: {fileID: 294999024}
+  distanciaMinima: 10
+  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &295644802
 GameObject:
   m_ObjectHideFlags: 0
@@ -4009,54 +4028,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380461287}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &383677512
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 383677515}
-  - component: {fileID: 383677514}
-  m_Layer: 0
-  m_Name: Cheese (2)
-  m_TagString: Food
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &383677514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383677512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
-  offset: {x: 0, y: 0, z: 0}
-  iniTime: 3
-  repTime: 5
---- !u!4 &383677515
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383677512}
-  serializedVersion: 2
-  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
-  m_LocalPosition: {x: 2.6, y: 0.1369605, z: 5.6507807}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2114580094}
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!1 &390070976
 GameObject:
   m_ObjectHideFlags: 0
@@ -10017,6 +9988,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   faster: 0
+  maxSpeed: 0
+  maxPosition: 0
+  originalPosition: 0
 --- !u!114 &523058429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10783,112 +10757,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583659630}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &590379293
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 590379297}
-  - component: {fileID: 590379296}
-  - component: {fileID: 590379295}
-  - component: {fileID: 590379294}
-  m_Layer: 0
-  m_Name: Plane (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!64 &590379294
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590379293}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &590379295
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590379293}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &590379296
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590379293}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &590379297
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590379293}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 17.57, y: -0.78, z: 52.3}
-  m_LocalScale: {x: 1, y: 1, z: 11.390469}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &602590970
 GameObject:
   m_ObjectHideFlags: 0
@@ -12966,7 +12834,7 @@ Transform:
   m_GameObject: {fileID: 777095100}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.16573687, y: 0.51851475, z: 13.5}
+  m_LocalPosition: {x: 0.16573687, y: 0.51851475, z: 13.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12995,13 +12863,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777095100}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e78672108e1fd1840b5831685bfff33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.5
   faster: 0.005
+  maxSpeed: 8
+  maxPosition: 0
+  originalPosition: 0
 --- !u!1 &806767426
 GameObject:
   m_ObjectHideFlags: 0
@@ -13643,6 +13514,7 @@ GameObject:
   - component: {fileID: 861719720}
   - component: {fileID: 861719719}
   - component: {fileID: 861719718}
+  - component: {fileID: 861719721}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -13718,12 +13590,29 @@ Transform:
   m_GameObject: {fileID: 861719717}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.04954702, w: 0.99877185}
-  m_LocalPosition: {x: 0, y: 0.09, z: -2.5}
+  m_LocalPosition: {x: 0, y: 0.09, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.68}
+--- !u!114 &861719721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861719717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e78672108e1fd1840b5831685bfff33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.5
+  faster: 0.005
+  maxSpeed: 8
+  maxPosition: 103.2
+  originalPosition: -3
 --- !u!1 &873957200
 GameObject:
   m_ObjectHideFlags: 0
@@ -13934,6 +13823,73 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903802652}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &931645895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 931645896}
+  - component: {fileID: 931645897}
+  - component: {fileID: 931645898}
+  m_Layer: 0
+  m_Name: Cheese 9
+  m_TagString: Food
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &931645896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931645895}
+  serializedVersion: 2
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
+  m_LocalPosition: {x: -2.4, y: 0.1369605, z: 89.56922}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2114580094}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!114 &931645897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931645895}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  spawner: {fileID: 0}
+  distanciaMinima: 5
+  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
+  offset: {x: 0, y: 0, z: 0}
+--- !u!114 &931645898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931645895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1081072347}
+  spawner: {fileID: 931645896}
+  distanciaMinima: 10
+  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &938011890
 GameObject:
   m_ObjectHideFlags: 0
@@ -15406,6 +15362,73 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039866315}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1046140304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1046140305}
+  - component: {fileID: 1046140306}
+  - component: {fileID: 1046140307}
+  m_Layer: 0
+  m_Name: Cheese 4
+  m_TagString: Food
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1046140305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046140304}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.2, y: 0.1369605, z: 29.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2114580094}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1046140306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046140304}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  spawner: {fileID: 0}
+  distanciaMinima: 5
+  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
+  offset: {x: 0, y: 0, z: 0}
+--- !u!114 &1046140307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046140304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1081072347}
+  spawner: {fileID: 1046140305}
+  distanciaMinima: 10
+  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1059051257
 GameObject:
   m_ObjectHideFlags: 0
@@ -15449,6 +15472,73 @@ Transform:
   - {fileID: 185028941}
   m_Father: {fileID: 777095101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1072363822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1072363823}
+  - component: {fileID: 1072363824}
+  - component: {fileID: 1072363825}
+  m_Layer: 0
+  m_Name: Cheese 8
+  m_TagString: Food
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1072363823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072363822}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.5, y: 0.1369605, z: 78.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2114580094}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1072363824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072363822}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  spawner: {fileID: 0}
+  distanciaMinima: 5
+  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
+  offset: {x: 0, y: 0, z: 0}
+--- !u!114 &1072363825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072363822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1081072347}
+  spawner: {fileID: 1072363823}
+  distanciaMinima: 10
+  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1081072329 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8858668344987094152, guid: b78cbd54c6fc6404eac3c4919de1ad38, type: 3}
@@ -15466,7 +15556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01599e0813e47ef438b573f1a81d1416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   sideMove: 5
 --- !u!114 &1081072338
 MonoBehaviour:
@@ -15483,6 +15573,95 @@ MonoBehaviour:
   cheeseAmountText: {fileID: 1810262783}
   counter: 0
   audioPlayer2: {fileID: 2125754653}
+--- !u!114 &1081072343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081072329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e78672108e1fd1840b5831685bfff33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.5
+  faster: 0.005
+  maxSpeed: 8
+  maxPosition: 106.2
+  originalPosition: 0
+--- !u!4 &1081072347 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8858668344987094261, guid: b78cbd54c6fc6404eac3c4919de1ad38, type: 3}
+  m_PrefabInstance: {fileID: 1921841579}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1088904232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1088904233}
+  - component: {fileID: 1088904234}
+  - component: {fileID: 1088904235}
+  m_Layer: 0
+  m_Name: Cheese 6
+  m_TagString: Food
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1088904233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088904232}
+  serializedVersion: 2
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
+  m_LocalPosition: {x: 1.67, y: 0.13, z: 50.76922}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2114580094}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!114 &1088904234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088904232}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  spawner: {fileID: 0}
+  distanciaMinima: 5
+  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
+  offset: {x: 0, y: 0, z: 0}
+--- !u!114 &1088904235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088904232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1081072347}
+  spawner: {fileID: 1088904233}
+  distanciaMinima: 10
+  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1091506783
 GameObject:
   m_ObjectHideFlags: 0
@@ -15798,6 +15977,73 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131691797}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1151780656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1151780657}
+  - component: {fileID: 1151780658}
+  - component: {fileID: 1151780659}
+  m_Layer: 0
+  m_Name: Cheese 5
+  m_TagString: Food
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1151780657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151780656}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.5, y: 0.1369605, z: 39.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2114580094}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1151780658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151780656}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  spawner: {fileID: 0}
+  distanciaMinima: 5
+  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
+  offset: {x: 0, y: 0, z: 0}
+--- !u!114 &1151780659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151780656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1081072347}
+  spawner: {fileID: 1151780657}
+  distanciaMinima: 10
+  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1179959836
 GameObject:
   m_ObjectHideFlags: 0
@@ -17165,7 +17411,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.24635816, y: 1.0374877, z: 64.35368}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 2.43}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 436460848}
@@ -17634,6 +17880,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   faster: 0
+  maxSpeed: 0
+  maxPosition: 0
+  originalPosition: 0
 --- !u!114 &1387500354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17710,6 +17959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverScreen: {fileID: 1314819542}
+  gameOver2: 0
 --- !u!1 &1441885092
 GameObject:
   m_ObjectHideFlags: 0
@@ -18970,6 +19220,73 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534067437}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1558969968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1558969969}
+  - component: {fileID: 1558969970}
+  - component: {fileID: 1558969971}
+  m_Layer: 0
+  m_Name: Cheese 3
+  m_TagString: Food
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1558969969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558969968}
+  serializedVersion: 2
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
+  m_LocalPosition: {x: 2.6, y: 0.1369605, z: 18.41}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2114580094}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!114 &1558969970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558969968}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  spawner: {fileID: 0}
+  distanciaMinima: 5
+  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
+  offset: {x: 0, y: 0, z: 0}
+--- !u!114 &1558969971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558969968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1081072347}
+  spawner: {fileID: 1558969969}
+  distanciaMinima: 10
+  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1586275023
 GameObject:
   m_ObjectHideFlags: 0
@@ -19260,6 +19577,73 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1641624458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1641624459}
+  - component: {fileID: 1641624460}
+  - component: {fileID: 1641624461}
+  m_Layer: 0
+  m_Name: Cheese 7
+  m_TagString: Food
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1641624459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641624458}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.2, y: 0.1369605, z: 68}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2114580094}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1641624460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641624458}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  spawner: {fileID: 0}
+  distanciaMinima: 5
+  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
+  offset: {x: 0, y: 0, z: 0}
+--- !u!114 &1641624461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641624458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1081072347}
+  spawner: {fileID: 1641624459}
+  distanciaMinima: 10
+  objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1643339802
 GameObject:
   m_ObjectHideFlags: 0
@@ -19481,7 +19865,7 @@ GameObject:
   - component: {fileID: 1666231556}
   - component: {fileID: 1666231555}
   m_Layer: 0
-  m_Name: Cheese (3)
+  m_Name: Cheese 1
   m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19499,10 +19883,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f580550feb84c824cba70c596aba7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1081072347}
+  spawner: {fileID: 1666231556}
+  distanciaMinima: 10
   objectToSpawn: {fileID: 3539972238042482737, guid: 580d68d7b1944b54a930d3f0b283befd, type: 3}
   offset: {x: 0, y: 0, z: 0}
-  iniTime: 5
-  repTime: 5
 --- !u!4 &1666231556
 Transform:
   m_ObjectHideFlags: 0
@@ -19512,7 +19897,7 @@ Transform:
   m_GameObject: {fileID: 1666231553}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 1.27, y: 0.1369605, z: 3.4507809}
+  m_LocalPosition: {x: 0.5, y: 0.1369605, z: 3.4507809}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19705,7 +20090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1389649336133526397, guid: 7f4da5bb08f0f6f479ae04f82e4040c4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1389649336489615613, guid: 7f4da5bb08f0f6f479ae04f82e4040c4, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -21019,6 +21404,7 @@ GameObject:
   - component: {fileID: 1810262785}
   - component: {fileID: 1810262784}
   - component: {fileID: 1810262783}
+  - component: {fileID: 1810262786}
   m_Layer: 0
   m_Name: Score
   m_TagString: Untagged
@@ -21168,7 +21554,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810262782}
   m_LocalRotation: {x: -0, y: -0, z: -0.04640909, w: 0.9989225}
-  m_LocalPosition: {x: 0, y: 0, z: -2.12}
+  m_LocalPosition: {x: 0, y: 0, z: -2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21176,9 +21562,26 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.32}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -950.25, y: -949.13}
+  m_AnchoredPosition: {x: -950.259, y: -949.13}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1810262786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810262782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e78672108e1fd1840b5831685bfff33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.5
+  faster: 0.005
+  maxSpeed: 8
+  maxPosition: 103.7
+  originalPosition: -2.5
 --- !u!1 &1813192388
 GameObject:
   m_ObjectHideFlags: 0
@@ -21640,6 +22043,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   faster: 0
+  maxSpeed: 0
+  maxPosition: 0
+  originalPosition: 0
 --- !u!114 &1874746518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21878,6 +22284,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8858668344987094152, guid: b78cbd54c6fc6404eac3c4919de1ad38, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1081072338}
+    - targetCorrespondingSourceObject: {fileID: 8858668344987094152, guid: b78cbd54c6fc6404eac3c4919de1ad38, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1081072343}
   m_SourcePrefab: {fileID: 100100000, guid: b78cbd54c6fc6404eac3c4919de1ad38, type: 3}
 --- !u!1 &1940871472
 GameObject:
@@ -23283,9 +23692,15 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 383677515}
-  - {fileID: 294999024}
   - {fileID: 1666231556}
+  - {fileID: 294999024}
+  - {fileID: 1558969969}
+  - {fileID: 1046140305}
+  - {fileID: 1151780657}
+  - {fileID: 1088904233}
+  - {fileID: 1641624459}
+  - {fileID: 1072363823}
+  - {fileID: 931645896}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2125754652
@@ -23528,7 +23943,6 @@ SceneRoots:
   - {fileID: 861719720}
   - {fileID: 89641698}
   - {fileID: 35997124}
-  - {fileID: 590379297}
   - {fileID: 777095101}
   - {fileID: 1287902459}
   - {fileID: 1667815786}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovementMouse : MonoBehaviour
 {
-    public float speed = 1f;
+    public float speed;
 
     public float sideMove = 1.0f;
 
