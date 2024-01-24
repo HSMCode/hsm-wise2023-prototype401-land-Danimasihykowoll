@@ -12,6 +12,7 @@ public class MovementMouse : MonoBehaviour
 
     void Update()
     {
+
         // Mueve el objeto en el eje x
         this.transform.Translate(Vector3.left * (speed * Time.deltaTime), Space.World);
 

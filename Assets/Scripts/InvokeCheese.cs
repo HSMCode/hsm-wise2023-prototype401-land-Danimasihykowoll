@@ -37,14 +37,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TuScript : MonoBehaviour
+public class InvokeCheese : MonoBehaviour
 {
     public Transform player;  // Asegúrate de asignar la referencia al objeto Player en el inspector.
     public Transform spawner; // Asegúrate de asignar la referencia al objeto Spawner en el inspector.
-    public float distanciaMinima = 5f; // La distancia mínima para activar el Invoke.
+    public float distanciaMinima; // La distancia mínima para activar el Invoke.
     public GameObject objectToSpawn;
     public Vector3 offset;
-    private bool yaInvocado = false;
+    private bool Invocated = false;
 
     void Update()
     {
@@ -56,19 +56,19 @@ public class TuScript : MonoBehaviour
         if (distancia <= distanciaMinima)
         {
             // Si la condición se cumple y aún no se ha invocado, realiza el Invoke.
-            if(!yaInvocado)
+            if(!Invocated)
             {
 
                 // Si la condición se cumple, realiza el Invoke.
                 Invoke("SpawnMoreObjects", 0f);
-                yaInvocado = true;
+                Invocated = true;
             }
         }
 
         else
         {
             // Si el jugador se aleja lo suficiente, restablece la variable para permitir una nueva invocación.
-            yaInvocado = false;
+            Invocated = false;
         }
 
     }

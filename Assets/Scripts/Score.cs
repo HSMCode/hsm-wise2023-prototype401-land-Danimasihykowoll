@@ -12,9 +12,10 @@ public class Score : MonoBehaviour
     public TMP_Text cheeseAmountText;
 
     //Variable for the counter
-    public float counter = 0f;
+    public float counter;
 
     public AudioSource audioPlayer2;
+
 
 
     // Start is called before the first frame update
@@ -38,21 +39,15 @@ public class Score : MonoBehaviour
         if (collision.gameObject.CompareTag("Food"))
         {
         
-            
             audioPlayer2.Play();
             // Destroy the cheese
             Destroy(collision.gameObject);
             counter = counter + 1f;
             cheeseAmountText.text = counter.ToString(); //+ "/10";
-
+           
 
         } 
 
-        // if (counter >= 10)
-        // {
-        //     cheeseAmountText.text = "10/10";
-        //     win = true;
-        // }
     }
 
 }
