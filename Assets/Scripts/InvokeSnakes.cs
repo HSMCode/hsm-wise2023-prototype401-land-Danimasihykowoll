@@ -38,27 +38,26 @@ using UnityEngine;
 
 public class InvokeSnakes : MonoBehaviour
 {
-    public Transform player;  // Asegúrate de asignar la referencia al objeto Player en el inspector.
-    public Transform spawner; // Asegúrate de asignar la referencia al objeto Spawner en el inspector.
-    public float distanciaMinima; // La distancia mínima para activar el Invoke.
-    public GameObject objectToSpawn;
+    public Transform player;  // variable the player
+    public Transform spawner; // variable for the spwaner
+    public float distanciaMinima; // Minimun distance to active the Invoke
+    public GameObject objectToSpawn; //variable for the object to spawn
     public Vector3 offset;
-    private bool Invocated = false;
+    private bool Invocated = false; //bool variable to Invoke just one snake everytime the condition happens
 
     void Update()
     {
         
-        // Calcula la distancia entre el jugador y el spawner.
+        // to calculate the distance between the player and the spawner
         float distancia = Vector3.Distance(player.position, spawner.position);
 
-        // Verifica si la distancia es menor o igual a la distancia mínima.
+    
         if (distancia <= distanciaMinima)
         {
-            // Si la condición se cumple y aún no se ha invocado, realiza el Invoke.
+            // If the condition is met, but not the invoke, do the invoke
             if(!Invocated)
             {
 
-                // Si la condición se cumple, realiza el Invoke.
                 Invoke("SpawnMoreObjects", 0f);
                 Invocated = true;
             }
@@ -66,7 +65,7 @@ public class InvokeSnakes : MonoBehaviour
 
         else
         {
-            // Si el jugador se aleja lo suficiente, restablece la variable para permitir una nueva invocación.
+            // If the player wanders far enough away, reset the variable to allow a new invoke
             Invocated = false;
         }
 

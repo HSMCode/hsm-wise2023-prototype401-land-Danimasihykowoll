@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class MovementMouse : MonoBehaviour
 {
-    public float speed;
+    public float speed; //variable for the left movement speed
 
-    public float sideMove = 1.0f;
+    public float sideMove; //variable for the right movement speed
 
     
 
     void Update()
     {
 
-        // Mueve el objeto en el eje x
+        // left movement
         this.transform.Translate(Vector3.left * (speed * Time.deltaTime), Space.World);
 
 
-        // Verifica si la tecla espaciadora (Space) está siendo presionada
+        // if the Space key is pressed, move to the right
         if (Input.GetKey(KeyCode.Space))
         {
-            // Mueve el objeto hacia la derecha con velocidad aumentada y cambia la dirección
+            
             this.transform.Translate(Vector3.right * (sideMove * Time.deltaTime), Space.World);
             
         }

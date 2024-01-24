@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
-    public LogicScript Logic;
+    public LogicScript Logic; //variable to find the gameOver void
 
-    public AudioSource audioPlayer;
+    public AudioSource audioPlayer; //audio variable
 
-    public AudioSource AudioPlayer3;
+    public AudioSource AudioPlayer3; //audio variable
 
-    public ParticleSystem mouse;
+    public ParticleSystem mouse; //particles variable
+
 
     // Start is called before the first frame update
     void Start()
     {
+        //locating the gameOver void in LogicScript 
         Logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
@@ -36,7 +38,6 @@ public class GameOver : MonoBehaviour
         {
             audioPlayer.Play();
             mouse.Play();
-            // Destroy the player
             Destroy(collision.gameObject);
             Logic.gameOver();
             AudioPlayer3.Stop();
