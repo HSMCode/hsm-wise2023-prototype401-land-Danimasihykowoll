@@ -106,6 +106,9 @@ This is a package with tools for 2D and 3D textes.
 This project is licensed under the [CC0 1.0 Universal](LICENSE.md)
 Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
 details
-Pixabay Content License for the sound effects and the background music - https://pixabay.com/es/service/license-summary/
 
+### Pixabay Content
 
+- **Sound effects and Background Music:**
+  - **License:** [Pixabay Content License](https://pixabay.com/es/service/license-summary/)
+  - **License Link:** [Pixabay Content License](https://pixabay.com/es/service/license-summary/)
