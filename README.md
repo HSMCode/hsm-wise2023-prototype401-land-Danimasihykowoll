@@ -1,67 +1,89 @@
+
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/uTVZkEVg)
 # Scape Cave
 
-One Paragraph of project description goes here.
-
 ## Summary
 
-  - [Getting Started](#getting-started)
-  - [Runing the tests](#running-the-tests)
-  - [Deployment](#deployment)
-  - [Built With](#built-with)
+  - [Description](#description)
+  - [Prerequisites](#prerequisites)
+  - [How to Play](#deployment)
+  - [Repository Organization](#repository-organization)
   - [Contributing](#contributing)
   - [Versioning](#versioning)
   - [Authors](#authors)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
 
-## Getting Started
 
-These instructions will get you a copy of the project up and running on
-your local machine for development and testing purposes. See deployment
-for notes on how to deploy the project on a live system.
+## Description
 
-### Prerequisites
+Scape Cave is a One Button Game about a mouse in a cave that has to eat the cheese. There are snakes that fall from the cave ceiling and can eat the mouse. Everytime the mouse moves faster, so it's more difficult.
 
-What things you need to install the software and how to install them
+It was made for a course in the Hochschule Mainz to learn about Unity.
 
-    Give examples
 
-### Installing
+## Prerequisites
 
-A step by step series of examples that tell you how to get a development
-env running
+This game was created with Unity 2022.3.11f1, so it needs to install this version.
+Here's the link to install it: https://unity.com/releases/editor/whats-new/2022.3.11
 
-Say what the step will be
+## How to Play
 
-    Give the example
+Open the scene "LandGame". In Unity there is a "Play" Button, press it and the game will load. Once beeing in the game window, press the "Space" key to play.
 
-And repeat
 
-    until finished
+## Repository Organization
+Into the folder "Assets" there are seven folders (Materials, Prefabs, Quirky Series Ultimate, Scenes, Scripts, Sounds, TextMesh Pro).
 
-End with an example of getting some data out of the system or using it
-for a little demo
+### Materials
+Some materials for the objects. The materials from the animals are in Quirky Series Ultimate.
 
-## Running the tests
+### Prefabs
+There is the original object for the cheese.
 
-Explain how to run the automated tests for this system
+### Quirky Series Ultimate
+Into this folder are more other folders, because there are the animals (the snake and the mouse) with all their materials, animations and textures.
 
-### Break down into end to end tests
+### Scenes
+There is the Scene "LandGame", where the game is, and a "SampleScene" if it needs to do something more.
 
-Explain what these tests test and why
+### Scripts
+Into this folder are 8 codes (GameOver, InvokeCheese, InvokeSnakes, LogicScript, MovementInTheCave, MovementMouse, MovementSnake and Score) to give the behavior to the game objects.
 
-    Give an example
+#### GameOver
+Script for the snakes to eat the mouse using OnCollisionEnter, destroy GameObject and calling the gameOver behavior from the LogicScript script.
 
-### And coding style tests
+#### InvokeCheese
+Script to invoke a cheese everytime that the cheese spawner is into a distance with the camera. 
 
-Explain what these tests test and why
+#### InvokeSnakes
+Script to invoke a snake everytime that the snake spawner is into a distance with the camera.
 
-    Give an example
+#### LogicScript
+Script with the gameOver and Restart behavior.
 
-## Deployment
+#### MovementInTheCave
+Script for the mouse, camera and score Z axis movement. 
 
-Add additional notes about how to deploy this on a live system
+#### MovementMouse
+Script for the x axis movement of the mouse. Using a GetKey, the mouse can move to the right everytime "Space" is pressed. Without the key pressed the mouse moves to the left.
+
+#### MovementSnake
+
+#### Score
+Script for the mouse to count the number of cheeses eaten. With a OnCollisionEnter the cheese is destroy when the mouse touches it and the counter adds 1.
+
+### Sounds
+This folder contains all the sound effects and music.
+
+### TextMesh Pro
+This is a package with tools for 2D and 3D textes.
+
+## Authors
+
+  - **Daniela Masihy Kowoll** - *Designed the game and developed it* -
+
 
 ## Built With
 
@@ -75,20 +97,7 @@ Add additional notes about how to deploy this on a live system
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
 of conduct, and the process for submitting pull requests to us.
 
-## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions
-available, see the [tags on this
-repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
-
-## Authors
-
-  - **Daniela Masihy Kowoll** - *Game designer and game developer* -
-    [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of
-[contributors](https://github.com/PurpleBooth/a-good-readme-template/contributors)
-who participated in this project.
 
 ## License
 
