@@ -30,15 +30,15 @@ public class GameOver : MonoBehaviour
       
     
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
      
         //when a snake touches another gameObject with the tag Player
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             audioPlayer.Play();
             mouse.Play();
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
             Logic.gameOver();
             AudioPlayer3.Stop();
         } 

@@ -31,24 +31,34 @@ public class Score : MonoBehaviour
     
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
+    // private void OnCollisionEnter(Collision collision)
+    // {
      
        
-        //when the player touches another gameObject with the tag Food
-        if (collision.gameObject.CompareTag("Food"))
-        {
+    //     //when the player touches another gameObject with the tag Food
+    //     if (collision.gameObject.CompareTag("Food"))
+    //     {
         
-            audioPlayer2.Play();
-            // Destroy the cheese
-            Destroy(collision.gameObject);
-            counter = counter + 1f;
-            cheeseAmountText.text = counter.ToString(); //+ "/10";
+    //         audioPlayer2.Play();
+    //         // Destroy the cheese
+    //         Destroy(collision.gameObject);
+    //         counter = counter + 1.0f;
+    //         Debug.Log(counter);
+    //         cheeseAmountText.text = counter.ToString(); //+ "/10";
            
 
-        } 
+    //     } 
 
+    // }
+    private void OnTriggerEnter(Collider other){
+    if (other.gameObject.CompareTag("Food")){
+        audioPlayer2.Play();
+        Destroy(other.gameObject);
+        counter += 1.0f;
+        Debug.Log(counter);
+        cheeseAmountText.text = counter.ToString(); // + "/10";
     }
+}
 
 }
 
