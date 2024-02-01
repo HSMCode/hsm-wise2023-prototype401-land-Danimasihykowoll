@@ -56,7 +56,7 @@ There is the Scene "LandGame", where the game is, and a "SampleScene" if it need
 
 
 ### Scripts
-Into this folder are 8 codes (GameOver, InvokeCheese, InvokeSnakes, LogicScript, MovementInTheCave, MovementMouse, MovementSnake and Score) to give the behavior to the game objects.
+Into this folder are eight codes (GameOver, InvokeCheese, InvokeSnakes, LogicScript, MovementInTheCave, MovementMouse, MovementSnake and Score) to give the behavior to the game objects.
 
 
 #### GameOver
@@ -64,11 +64,11 @@ Script for the snakes to eat the mouse using OnCollisionEnter, destroy GameObjec
 
 
 #### InvokeCheese
-Script to invoke a cheese everytime that the cheese spawner is into a distance with the camera. 
+Script to invoke a cheese after a determined time and repeat it. 
 
 
 #### InvokeSnakes
-Script to invoke a snake everytime that the snake spawner is into a distance with the camera.
+Script to invoke a snake after a determined time and repeat it.
 
 
 #### LogicScript
@@ -82,12 +82,13 @@ Script for the mouse, camera and score Z axis movement.
 #### MovementMouse
 Script for the x axis movement of the mouse. Using a GetKey, the mouse can move to the right everytime "Space" is pressed. Without the key pressed the mouse moves to the left.
 
+
 #### MovementSnake
 Script for the z axis movement of the snakes to move them against of the mouse direction. 
 
 
 #### Score
-Script for the mouse to count the number of cheeses eaten. With a OnCollisionEnter the cheese is destroy when the mouse touches it and the counter adds 1.
+Script for the mouse to count the number of cheeses eaten. With a OnTriggerEnter the cheese is destroy when the mouse touches it and the counter adds one.
 
 
 ### Sounds
