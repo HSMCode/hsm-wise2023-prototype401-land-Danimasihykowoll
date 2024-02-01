@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class MovementSnake : MonoBehaviour
 {
-    public float move; //variable for the forward movement speed
+    public float move; //variable for the movement speed
 
-
-    
 
     void Update()
     {
-
-        // forward movement
+        // Movement of the snakes to go against the mouse direction
         this.transform.Translate(Vector3.back * (move * Time.deltaTime), Space.World);
-
-        
     }
 }

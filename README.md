@@ -16,7 +16,7 @@
 
 ## Description
 
-Scape Cave is a One Button Game about a mouse in a cave that has to eat the cheese. There are snakes that fall from the cave ceiling and can eat the mouse. Everytime the mouse moves faster, so it's more difficult.
+Scape Cave is a One Button Game about a mouse in a cave that has to eat as much cheese as possible. There are snakes that can eat the mouse. Everytime the mouse moves faster and appear more snakes, so it's more difficult. The mouse can pass through the cave, but the player has to be careful if behind a rock is a snake.
 
 It was made for a course in the Hochschule Mainz to learn about Unity.
 
@@ -24,13 +24,13 @@ It was made for a course in the Hochschule Mainz to learn about Unity.
 
 ## Prerequisites
 
-This game was created with Unity 2022.3.11f1, so it needs to install this version.
-Here's the link to install it: https://unity.com/releases/editor/whats-new/2022.3.11
+This game was created with Unity 2022.3.11f1, so it needs to install this Unity editor version.
+Here's the link to install Unity editor: https://unity.com/releases/editor/whats-new/2022.3.11
+Also is required to install Unity Hub: https://unity.com/de/unity-hub
 
 
 
 ## How to Play
-
 Open the scene "LandGame". In Unity there is a "Play" Button, press it and the game will load. Once beeing in the game window, press the "Space" key to play.
 
 
@@ -81,6 +81,9 @@ Script for the mouse, camera and score Z axis movement.
 
 #### MovementMouse
 Script for the x axis movement of the mouse. Using a GetKey, the mouse can move to the right everytime "Space" is pressed. Without the key pressed the mouse moves to the left.
+
+#### MovementSnake
+Script for the z axis movement of the snakes to move them against of the mouse direction. 
 
 
 #### Score

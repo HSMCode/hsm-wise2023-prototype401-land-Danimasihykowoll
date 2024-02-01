@@ -8,6 +8,7 @@ public class Score : MonoBehaviour
 {
 
     public static bool win = false;
+
     //Variable for text (amount of cheeses)
     public TMP_Text cheeseAmountText;
 
@@ -21,8 +22,8 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      //to write the counter beginning in 0/50
-      cheeseAmountText.text = counter.ToString(); // + "/10";   
+      //to write the counter beginning in 0
+      cheeseAmountText.text = counter.ToString(); 
     }
 
     // Update is called once per frame
@@ -31,32 +32,14 @@ public class Score : MonoBehaviour
     
     }
 
-    // private void OnCollisionEnter(Collision collision)
-    // {
-     
-       
-    //     //when the player touches another gameObject with the tag Food
-    //     if (collision.gameObject.CompareTag("Food"))
-    //     {
-        
-    //         audioPlayer2.Play();
-    //         // Destroy the cheese
-    //         Destroy(collision.gameObject);
-    //         counter = counter + 1.0f;
-    //         Debug.Log(counter);
-    //         cheeseAmountText.text = counter.ToString(); //+ "/10";
-           
-
-    //     } 
-
-    // }
+    //if the mouse touches a cheese, the counter add 1
     private void OnTriggerEnter(Collider other){
     if (other.gameObject.CompareTag("Food")){
         audioPlayer2.Play();
         Destroy(other.gameObject);
         counter += 1.0f;
         Debug.Log(counter);
-        cheeseAmountText.text = counter.ToString(); // + "/10";
+        cheeseAmountText.text = counter.ToString(); 
     }
 }
 
